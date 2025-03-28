@@ -6,9 +6,9 @@ const findIndex = (arr, target) => {
     return;
   }
 
-  for (let index in arr) { // Remember that for...of is for values themselves.
-    if (arr[index] === target) {
-      console.log(`Index: ${index}`);
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+      console.log(`Index: ${i}`);
       return;
     }
   }
