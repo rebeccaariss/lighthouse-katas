@@ -5,5 +5,19 @@ const arr2 = [1, 2, 3, 4]; // No repeating numbers found
 const arr3 = [7, 8, 9, 7]; // First repeating number: 7
 
 const firstRepeating = (arr) => {
-  // Your code here
+  let temp = arr[0];
+
+  if (arr.length === 0) {
+    console.log('The array is empty.');
+  }
+
+  for (let i = 1; i  < arr.length; i++) { // 🌷 initializing with 1 to skip over arr[0], which has already been assigned to temp variable. (this avoids logical error).
+    if (arr[i] === temp) {
+      console.log(`First repeating number: ${temp}`);
+      return;
+    }
+  }
+
+  // If the loop completes without entering conditional block:
+  console.log('No repeating numbers found');
 };
