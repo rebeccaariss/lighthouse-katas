@@ -1,7 +1,18 @@
 // Write a function that takes an array and a target number. It should log the index of the first occurrence of the target number or -1 if the number isn’t in the array.
 
 const findIndex = (arr, target) => {
-  // Your code here
+  if (arr.length === 0) {
+    console.log('The array is empty.');
+  }
+
+  for (let index in arr) { // Remember that for...of is for values themselves.
+    if (arr[index] === target) {
+      console.log(`Index: ${index}`);
+      return;
+    }
+  }
+
+  console.log('Index: -1');
 };
 
 findIndex([4, 2, 7, 1, 9], 7); // "Index: 2"

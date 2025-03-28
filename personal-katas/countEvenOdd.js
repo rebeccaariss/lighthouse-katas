@@ -1,7 +1,6 @@
 // Write a function that takes an array of numbers and logs the count of even and odd numbers.
 
 const countEvenOdd = (arr) => {
-  // Your code here
   let even = 0;
   let odd = 0;
 
@@ -10,10 +9,10 @@ const countEvenOdd = (arr) => {
     return;
   }
 
-  for (let num of arr) { // don't forget LET here; this caused issues re: global scope.
-    if (num % 2 === 0) { // evenly divisible resulting in no remainder
+  for (let num of arr) { // don't forget LET here.
+    if (num % 2 === 0) {
       even++;
-    } else if (num % 2 === 1) { // not evenly divisible, resulting in remainder of 1
+    } else if (num % 2 === 1) {
       odd++;
     }
   }
@@ -23,7 +22,6 @@ const countEvenOdd = (arr) => {
 
 countEvenOdd([3, 9, 2, 10, 4, 6]); 
 // Even count: 4, Odd count: 2
-// Silly chatgpt. Gave the wrong values in the notes initially (3 and 3).
 countEvenOdd([]); 
 // "The array is empty."
 countEvenOdd([7, 5, 3]); 
