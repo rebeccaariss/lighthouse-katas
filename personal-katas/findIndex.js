@@ -3,6 +3,7 @@
 const findIndex = (arr, target) => {
   if (arr.length === 0) {
     console.log('The array is empty.');
+    return;
   }
 
   for (let index in arr) { // Remember that for...of is for values themselves.
