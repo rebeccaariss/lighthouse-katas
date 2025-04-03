@@ -1,3 +1,4 @@
+// NOTE: This is a really great problem for keeping track of different values, accessing & assigning values. See for loop.
 const mostFrequent = (arr) => {
   if (arr.length === 0) {
     console.log("The array is empty.");
@@ -5,11 +6,16 @@ const mostFrequent = (arr) => {
   }
 
   let frequency = {};
-  let count = 0;
+  let highestCount = 0;
   let mostFrequent = null;
 
   for (let element of arr) { // confirm for of vs for in here -- correct because we want values, not indices
+    frequency[element] = (frequency[element] || 0) + 1;
 
+    if (frequency[element] > highestCount) {
+      highestCount = frequency[element];
+      mostFrequent = element;
+    }
   }
 
   console.log(`Most frequent element: ${mostFrequent}`);
